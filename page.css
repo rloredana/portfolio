@@ -292,6 +292,11 @@
    PREMIUM MOBILE RESPONSIVENESS
    =========================================================================== */
 
+/* ============================================================================
+   PREMIUM MOBILE RESPONSIVENESS
+   ===========================================================================
+*/
+
 /* =========================
    TABLET & DOWN (1024px ↓)
    ========================= */
@@ -346,12 +351,12 @@
         border-radius: 12px !important;
     }
 
-    /* 6️⃣ Force Comic Sans for Project Overview */
-    #project-overview,
-    #project-overview p,
-    #project-overview h2,
-    #project-overview h3 {
-        font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+    /* 6️⃣ Project Overview font forced (only inside cards content) */
+    .overview-card.note p,
+    .overview-card.note li {
+        font-family: 'Patrick Hand', cursive !important;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
     }
 }
 
@@ -401,11 +406,11 @@
         border-radius: 12px !important;
     }
 
-    /* Project Overview font forced */
-    #project-overview,
-    #project-overview p,
-    #project-overview h2,
-    #project-overview h3 {
-        font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+    /* Project Overview font forced (only inside cards content) */
+    .overview-card.note p,
+    .overview-card.note li {
+        font-family: 'Patrick Hand', cursive !important;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
     }
 }
