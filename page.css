@@ -346,6 +346,7 @@
         border-radius: 12px !important;
     }
 
+    .overview-card.note h3,
     .overview-card.note p,
     .overview-card.note li {
         font-family: Arial, sans-serif;
@@ -410,6 +411,7 @@
         letter-spacing: normal !important;   /* prevents tight/handwritten spacing */
     }
 }
+
 
 
 
