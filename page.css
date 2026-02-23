@@ -292,11 +292,6 @@
    PREMIUM MOBILE RESPONSIVENESS
    =========================================================================== */
 
-/* ============================================================================
-   PREMIUM MOBILE RESPONSIVENESS
-   ===========================================================================
-*/
-
 /* =========================
    TABLET & DOWN (1024px ↓)
    ========================= */
@@ -410,7 +405,10 @@
         font-family: Arial, sans-serif !important;
         font-size: 0.95rem !important;
         line-height: 1.5 !important;
+        font-weight: normal !important;      /* ensures no bold/handwriting look */
+        letter-spacing: normal !important;   /* prevents tight/handwritten spacing */
     }
 }
+
 
 
