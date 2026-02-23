@@ -292,107 +292,85 @@
    PREMIUM MOBILE RESPONSIVENESS
    ============================================================================ */
 
-
-/* =========================================
+/* =========================
    TABLET (1024px ↓)
-   Clean stacking + centered layout
-   ========================================= */
+   ========================= */
 @media (max-width: 1024px) {
 
-    /* Intro stacks nicely */
+    /* Introduction stacks */
     #introduction-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
-        text-align: center;
-    }
-
-    .dashboard-image img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Overview cards stack */
-    .overview-cards {
-        display: flex;
         flex-direction: column;
         gap: 2rem;
     }
 
-    /* Process grid stack */
-    .process-items-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-    }
-
-    /* Scale images cleanly */
+    /* Images never overflow */
+    .dashboard-image img,
     .dash-image img,
     .overview-image img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
-    /* More Projects – match home style but stacked */
-    .more-projects-container {
-        justify-content: center;
+    /* Overview cards stack but keep spacing */
+    .overview-cards {
+        flex-direction: column;
         gap: 2rem;
+    }
+
+    /* Process grid becomes single column WITHOUT killing spacing */
+    .process-items-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* More projects behave like home.css mobile */
+    .more-projects-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     .more-project {
         flex: 1 1 100%;
-        max-width: 520px;   /* keeps it elegant and centered */
-        margin: 0 auto;
+        max-width: 500px;
     }
 }
 
 
-/* =========================================
+/* =========================
    MOBILE (480px ↓)
-   Ultra clean, centered, no font changes
-   ========================================= */
+   ========================= */
 @media (max-width: 480px) {
 
+    /* Keep natural spacing */
     section {
         padding: 2rem 5%;
     }
 
-    /* Keep everything visually centered */
-    #introduction-wrapper,
-    .overview-cards,
-    .process-items-grid,
-    .more-projects-container {
-        align-items: center;
-    }
-
-    /* Keep cards clean without altering typography */
-    .overview-card,
-    .process-item,
-    .more-project {
-        width: 100%;
+    /* Prevent text stretching edge-to-edge */
+    .content-wrapper {
         max-width: 100%;
     }
 
-    /* Images scale perfectly */
-    .dashboard-image img,
-    .dash-image img,
-    .overview-image img,
-    .more-project img {
-        width: 100%;
+    /* Ensure images never blow up */
+    img {
+        max-width: 100%;
         height: auto;
-        margin-top: 1rem;
     }
 
-    /* Clean section spacing */
-    .section-wrapper {
-        padding: 2.5rem 0;
+    /* Preserve spacing inside process + overview */
+    .overview-card,
+    .process-item {
+        width: 100%;
+    }
+
+    /* More projects identical behavior to home */
+    .more-project {
+        max-width: 100%;
     }
 
     /* Footer stack */
     .footer-container {
         flex-direction: column;
         gap: 0.75rem;
-        text-align: center;
     }
 }
