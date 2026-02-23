@@ -290,7 +290,7 @@
 
 /* ============================================================================
    PREMIUM MOBILE RESPONSIVENESS
-   ============================================================================ */
+   =========================================================================== */
 
 /* =========================
    TABLET & DOWN (1024px ↓)
@@ -330,16 +330,30 @@
     }
 
     /* 5️⃣ More Projects EXACTLY like home mobile */
-    .more-project {
-        flex: 1 1 100%;
-        max-width: 500px;
+    .more-projects-container {
+        display: flex;
+        flex-wrap: wrap !important;
+        gap: 2rem !important;
+        padding: 0 1rem !important;
+        justify-content: center;
+        align-items: stretch !important;
     }
 
-    .more-projects-container {
-        justify-content: center;
+    .more-project {
+        flex: 1 1 calc(100% - 2rem) !important;
+        max-width: 350px;
+        padding: 1.3rem !important;
+        border-radius: 12px !important;
+    }
+
+    /* 6️⃣ Force Comic Sans for Project Overview */
+    #project-overview,
+    #project-overview p,
+    #project-overview h2,
+    #project-overview h3 {
+        font-family: "Comic Sans MS", "Comic Sans", cursive !important;
     }
 }
-
 
 /* =========================
    MOBILE (480px ↓)
@@ -370,5 +384,28 @@
     .footer-container {
         flex-direction: column;
         gap: 0.75rem;
+    }
+
+    /* More Projects MOBILE full-width */
+    .more-projects-container {
+        justify-content: center;
+        flex-wrap: wrap !important;
+        gap: 2rem !important;
+        padding: 0 1rem !important;
+    }
+
+    .more-project {
+        flex: 1 1 100% !important;
+        max-width: 350px;
+        padding: 1.3rem !important;
+        border-radius: 12px !important;
+    }
+
+    /* Project Overview font forced */
+    #project-overview,
+    #project-overview p,
+    #project-overview h2,
+    #project-overview h3 {
+        font-family: "Comic Sans MS", "Comic Sans", cursive !important;
     }
 }
