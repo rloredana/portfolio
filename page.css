@@ -293,17 +293,23 @@
    ============================================================================ */
 
 /* =========================
-   TABLET (1024px ↓)
+   TABLET & DOWN (1024px ↓)
    ========================= */
 @media (max-width: 1024px) {
 
-    /* Introduction stacks */
+    /* 1️⃣ Stack intro cleanly */
     #introduction-wrapper {
         flex-direction: column;
         gap: 2rem;
     }
 
-    /* Images never overflow */
+    /* 2️⃣ Keep images centered and contained */
+    .dashboard-image,
+    .dash-image,
+    .overview-image {
+        text-align: center;
+    }
+
     .dashboard-image img,
     .dash-image img,
     .overview-image img {
@@ -311,27 +317,26 @@
         height: auto;
     }
 
-    /* Overview cards stack but keep spacing */
-    .overview-cards {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    /* Process grid becomes single column WITHOUT killing spacing */
+    /* 3️⃣ Process grid becomes single column (KEEP GRID) */
     .process-items-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    /* More projects behave like home.css mobile */
-    .more-projects-container {
+    /* 4️⃣ Overview cards stack naturally */
+    .overview-cards {
         flex-direction: column;
-        align-items: center;
+        gap: 2rem;
     }
 
+    /* 5️⃣ More Projects EXACTLY like home mobile */
     .more-project {
         flex: 1 1 100%;
         max-width: 500px;
+    }
+
+    .more-projects-container {
+        justify-content: center;
     }
 }
 
@@ -341,31 +346,24 @@
    ========================= */
 @media (max-width: 480px) {
 
-    /* Keep natural spacing */
+    /* Prevent text stretching edge-to-edge */
     section {
         padding: 2rem 5%;
     }
 
-    /* Prevent text stretching edge-to-edge */
-    .content-wrapper {
-        max-width: 100%;
+    /* Fix bullet spacing */
+    .process-list {
+        padding-left: 1.2rem;
     }
 
-    /* Ensure images never blow up */
+    .process-list li {
+        margin-bottom: 0.6rem;
+    }
+
+    /* Ensure all images behave */
     img {
         max-width: 100%;
         height: auto;
-    }
-
-    /* Preserve spacing inside process + overview */
-    .overview-card,
-    .process-item {
-        width: 100%;
-    }
-
-    /* More projects identical behavior to home */
-    .more-project {
-        max-width: 100%;
     }
 
     /* Footer stack */
