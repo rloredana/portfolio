@@ -292,16 +292,20 @@
    PREMIUM MOBILE RESPONSIVENESS
    ============================================================================ */
 
+
 /* =========================================
-   SIMPLE PREMIUM RESPONSIVENESS – TABLET
+   TABLET (1024px ↓)
+   Clean stacking + centered layout
    ========================================= */
 @media (max-width: 1024px) {
 
-    /* Intro section image below text */
+    /* Intro stacks nicely */
     #introduction-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        align-items: center;
+        gap: 2.5rem;
+        text-align: center;
     }
 
     .dashboard-image img {
@@ -313,71 +317,64 @@
     .overview-cards {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     /* Process grid stack */
     .process-items-grid {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
-    /* Images scale properly */
+    /* Scale images cleanly */
     .dash-image img,
     .overview-image img {
         width: 100%;
         height: auto;
     }
 
-    /* More projects stack */
+    /* More Projects – match home style but stacked */
     .more-projects-container {
-        display: flex;
-        flex-direction: column;
+        justify-content: center;
         gap: 2rem;
     }
 
     .more-project {
-        width: 100%;
+        flex: 1 1 100%;
+        max-width: 520px;   /* keeps it elegant and centered */
+        margin: 0 auto;
     }
 }
 
+
 /* =========================================
-   PREMIUM MOBILE CLEAN VERSION
+   MOBILE (480px ↓)
+   Ultra clean, centered, no font changes
    ========================================= */
 @media (max-width: 480px) {
-
-    body {
-        font-size: 14px;
-    }
 
     section {
         padding: 2rem 5%;
     }
 
-    .section-title {
-        font-size: 1.4rem;
-        text-align: center;
-        margin-bottom: 1rem;
+    /* Keep everything visually centered */
+    #introduction-wrapper,
+    .overview-cards,
+    .process-items-grid,
+    .more-projects-container {
+        align-items: center;
     }
 
-    .section-subtitle {
-        font-size: 1rem;
-    }
-
-    p {
-        line-height: 1.6;
-    }
-
-    /* Cards get softer feel */
+    /* Keep cards clean without altering typography */
     .overview-card,
     .process-item,
     .more-project {
-        padding: 1.2rem;
-        border-radius: 12px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    /* Images full width with spacing */
+    /* Images scale perfectly */
     .dashboard-image img,
     .dash-image img,
     .overview-image img,
@@ -385,15 +382,14 @@
         width: 100%;
         height: auto;
         margin-top: 1rem;
-        border-radius: 10px;
     }
 
-    /* More breathing room between sections */
+    /* Clean section spacing */
     .section-wrapper {
         padding: 2.5rem 0;
     }
 
-    /* Footer stack cleanly */
+    /* Footer stack */
     .footer-container {
         flex-direction: column;
         gap: 0.75rem;
