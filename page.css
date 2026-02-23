@@ -350,6 +350,13 @@
         padding: 1.3rem !important;
         border-radius: 12px !important;
     }
+
+    .overview-card.note p,
+    .overview-card.note li {
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 /* =========================
@@ -397,5 +404,13 @@
         padding: 1.3rem !important;
         border-radius: 12px !important;
     }
+
+    .overview-card.note p,
+    .overview-card.note li {
+        font-family: Arial, sans-serif !important;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
 }
+
 
