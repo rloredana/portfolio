@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loredana | Data Portfolio</title>
+    <link rel="icon" type="image/png" href="logo/rl_white.png">
+    <!-- Some browsers (like Chrome) will automatically look for a favicon.ico file in the root directory of the website -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="contact-modal.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo and Name -->
+            <div class="logo-container">
+                <a href="home.html">
+                    <img src="logo/rl_gold.png" alt="LR Logo" class="logo">
+                </a>
+                <h1>Loredana</h1>
+            </div>
+            <!-- Navigation Links -->
+            <nav>
+                <a href="home.html">About</a>
+                <a href="home.html#projects">Projects</a>
+                <a href="#contact" class="open-contact-modal">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="section-wrapper introduction-wrapper">
+        <section id="introduction-wrapper">
+            <div class="content-wrapper">
+                <!-- Dashboard Name -->
+                <h2 class="section-title">Executive Dashboard</h2>
+                <!-- <p>An executive dashboard tracking key metrics, revenue trends, client performance, and insights through
+                    charts and visualizations, providing a clear overview of business performance toward targets.</p> -->
+                <p>
+                    This executive dashboard consolidates core business KPIs, revenue and client performance metrics,
+                    and statistically validated forecasts. Forecasts leverage walk-forward validation and KPI-based
+                    accuracy measures, providing actionable insights into future revenue trajectories and target
+                    achievement.
+                </p>
+                <br> <!-- This adds space between the two paragraphs -->
+            </div>
+            <div class="dashboard-image">
+                <img src="home/projects/EXECdash_new_.png" alt="Executive Dashboard Image">
+            </div>
+        </section>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="section-wrapper project-overiew-wrapper">
+        <section id="project-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">Project Overview</h2>
+
+                <div class="overview-cards">
+                    <div class="overview-card note">
+                        <h3>Objective</h3>
+                        <p>Provide executives with a single interface to monitor key
+                            performance indicators, assess revenue and client trends, and support data-driven decisions
+                            across business areas, including revenue, client growth, retention, and platform
+                            performance.
+                        </p>
+                    </div>
+
+                    <div class="overview-card note">
+                        <h3>Toolstack</h3>
+                        <p> <strong>Power BI</strong> for interactive visualisation; <strong>BigQuery</strong> for data
+                            warehousing; CRM, ERP, DSP platforms, and internal databases for data sourcing;
+                            <strong>SQL</strong> for data
+                            transformation; <strong>ARIMA+</strong> forecasting models for predictive analysis.
+                        </p>
+                    </div>
+
+                    <div class="overview-card note">
+                        <h3>Audience</h3>
+                        <p>CEO, Executive Directors, Finance, Marketing, and Sales
+                            leadership. The dashboard delivers high-level KPIs for strategic oversight and detailed
+                            insights for operational and commercial decision-making.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Dashboard Preview -->
+    <div class="section-wrapper dash-wrapper">
+        <section id="dash-preview">
+            <div class="content-wrapper">
+                <h2 class="section-title">Dashboard Preview</h2>
+
+                <p>The dashboard consolidates core business KPIs, revenue performance, client analytics, and
+                    statistically validated forecasts within a single executive interface. Interactive KPI cards and
+                    trend visuals provide a real-time view of revenue, client growth, retention, and platform
+                    performance.
+                </p>
+                <br>
+                <p>Users can drill down by client classification (New, Returning, Existing) to evaluate acquisition
+                    effectiveness, retention patterns, and churn risk. Integrated predictive forecasting, powered by
+                    ARIMA+ models with walk-forward validation and KPI-based accuracy monitoring, provides
+                    forward-looking visibility into revenue trajectories and target attainment.
+                </p>
+                <br>
+                <p>A dedicated Service-Level Performance table highlights Revenue Share, Year-over-Year Growth
+                    Contribution, and Gross Profit, enabling executives to quickly identify top-performing services and
+                    assess their impact on overall growth and profitability.</p>
+
+                <div class="dash-image">
+                    <img src="home/projects/EXECdash_new_.png" alt="Data preparation diagram">
+                </div>
+
+                <div class="dash-image">
+                    <img src="pages-dash/executive/Aditional_Insights_Exec.png" alt="Data preparation diagram">
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Process -->
+    <div class="section-wrapper process-wrapper">
+        <section id="process">
+            <div class="content-wrapper">
+                <h2 class="section-title">Process</h2>
+
+                <div class="process-items-grid">
+
+                    <div class="process-item">
+                        <h3 class="section-subtitle">Data Sources & Preparation</h3>
+                        <ul class="process-list">
+                            <li>Consolidated platform, campaign, financial, and CRM data into BigQuery, creating unified
+                                client records.</li>
+                            <li>Classified clients into New, Returning, and Existing groups for retention and
+                                contribution analysis.</li>
+                            <li>Applied ARIMA+ predictive models to forecast revenue and gross profit by month and
+                                client type.</li>
+                            <li>Validated and standardised data to ensure accuracy, consistency, and readiness for
+                                reporting.</li>
+                        </ul>
+                    </div>
+
+                    <div class="process-item">
+                        <h3 class="section-subtitle">Dashboard Development & Design</h3>
+                        <ul class="process-list">
+                            <li>Developed KPI cards for Revenue YTD, Gross Profit YTD, New Clients YTD, Target
+                                Achievement, and Retention Rate.</li>
+                            <li>Built visualisations including line charts, tables, ribbon charts, and decomposition
+                                trees.</li>
+                            <li>Integrated Power BI with BigQuery for real-time insights.</li>
+                            <li>Implemented DAX formulas for dynamic calculations: YTD totals, growth percentages,
+                                retention metrics, target comparisons, and custom tables.</li>
+                        </ul>
+                    </div>
+
+                    <div class="process-item">
+                        <h3 class="section-subtitle">Key Insights</h3>
+                        <ul class="process-list">
+                            <li>Revenue and gross profit trends provide a clear view of business performance and growth
+                                opportunities.</li>
+                            <li>Client classification highlights the relative contribution of New, Returning, and
+                                Existing clients.</li>
+                            <li>Forecasting identifies potential gaps in target attainment, enabling proactive strategic
+                                decisions.</li>
+                            <li>Platform analysis indicates which channels drive revenue by client classification.</li>
+                        </ul>
+                    </div>
+
+                    <div class="process-item">
+                        <h3 class="section-subtitle">Impact</h3>
+                        <ul class="process-list">
+                            <li>Reduces time spent on manual consolidation from multiple platforms and Excel.</li>
+                            <li>Supports data-driven decisions across Finance, Marketing, and Sales.</li>
+                            <li>Enables proactive client acquisition, retention, and revenue management.</li>
+                            <li>Highlights high-value client classifications and platform performance gaps for strategic
+                                planning.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <br>
+                <p><em>Note: All metrics presented are based on professional experience and have been anonymised,
+                        aggregated, or proportionally adjusted to ensure compliance with confidentiality and data
+                        protection
+                        standards.</em>
+                </p>
+
+            </div>
+        </section>
+    </div>
+
+
+    <!-- More Projects Section -->
+    <div class="section-wrapper more-projects-wrapper">
+        <section id="more-projects">
+            <div class="content-wrapper">
+                <h2 class="section-title">More Projects</h2>
+                <div class="more-projects-container">
+                    <a href="revenue-dashboard.html" class="more-project">
+                        <img src="home/projects/RevDashNew_.png" alt="Revenue Dashboard">
+                        <h3 class="section-subtitle">Revenue & Client Insights</h3>
+                        <p>Interactive dashboard visualising key sales KPIs, trends, and insights to support
+                            strategic decision-making.</p>
+                        <br>
+                        <p>MySQL • Zoho • Power BI</p>
+                    </a>
+                    <a href="classifier-app.html" class="more-project">
+                        <img src="home/workflows/Client-Class.png" alt="Classifier">
+                        <br>
+                        <h3 class="section-subtitle">Client Classifier Application</h3>
+                        <p>A Python application that classifies clients using large-scale data and custom
+                            business
+                            logic.</p>
+                        <br>
+                        <p><strong>85% faster</strong> client data processing</p>
+                    </a>
+                    <a href="commercial-dashboard.html" class="more-project">
+                        <img src="home/projects/Commercial_dash_.png" alt="Comercial Dashboard">
+                        <h3 class="section-subtitle">Commercial Overview</h3>
+                        <p>Finance dashboard visualising key KPIs, profitability trends, and cost insights
+                            to
+                            drive
+                            decision-making.</p>
+                        <br>
+                        <p>QlikSense • Excel • PowerBI</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Loredana</p>
+            <nav>
+                <a href="home.html">About</a>
+                <a href="home.html#projects">Projects</a>
+                <a href="#contact" class="open-contact-modal">Contact</a>
+            </nav>
+            <!-- Up Arrow Button -->
+            <a href="#" class="back-to-top">︿</a>
+        </div>
+    </footer>
+
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.onscroll = function () {
+            let currentScroll = window.pageYOffset;
+            header.style.top = (currentScroll > lastScroll) ? '-100px' : '0';
+            lastScroll = currentScroll;
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTop = document.querySelector(".back-to-top");
+
+            // Show/hide button on scroll
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 300) {
+                    backToTop.style.display = "block"; // Show button
+                } else {
+                    backToTop.style.display = "none"; // Hide button
+                }
+            });
+
+            // Smooth scroll to top
+            backToTop.addEventListener("click", function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+
+    <div id="modal-container"></div>
+    <script>
+        fetch('contact-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('modal-container').innerHTML = html;
+
+                // Initialize modal after HTML is inserted
+                const modal = document.getElementById('contactModal');
+                const closeBtn = modal.querySelector('.close-btn');
+
+                // Attach click events to all triggers
+                document.querySelectorAll('.open-contact-modal').forEach(button => {
+                    button.addEventListener('click', e => {
+                        e.preventDefault();
+                        modal.style.display = 'flex';
+                    });
+                });
+
+                // Close modal on X
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+
+                // Close modal if clicking outside modal-content
+                window.addEventListener('click', e => {
+                    if (e.target === modal) modal.style.display = 'none';
+                });
+            });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loredana | Data Portfolio</title>
+    <link rel="icon" type="image/png" href="logo/rl_white.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="contact-modal.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="home.html">
+                    <img src="logo/rl_gold.png" alt="LR Logo" class="logo">
+                </a>
+                <h1>Loredana</h1>
+            </div>
+            <nav>
+                <a href="home.html">About</a>
+                <a href="home.html#projects">Projects</a>
+                <a href="#contact" class="open-contact-modal">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="section-wrapper introduction-wrapper">
+        <section id="introduction-wrapper">
+            <div class="content-wrapper">
+                <h2 class="section-title">Data Audit & Transformation</h2>
+                <p>I led a SQL-driven CRM data rescue initiative that transformed fragmented, unreliable records into a
+                    structured, ready intelligence system supporting sales growth and marketing performance.</p>
+                <p>This project didn’t just clean data, it <strong>unlocked the full potential of the CRM</strong>.</p>
+            </div>
+
+            <div class="dashboard-image">
+                <img src="pages-apps/audit/intro.png" alt="CRM Data Quality Overview">
+            </div>
+
+        </section>
+    </div>
+
+    <!-- The Problem -->
+    <div class="section-wrapper project-overiew-wrapper">
+        <section id="project-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">The Problem</h2>
+                <div class="overview-item">
+                    <p>CRM reporting relied on data that was incomplete, inconsistent, and difficult to trust for
+                        decision-making.</p>
+                    <br>
+                    <p>The CRM had significant gaps that affected reporting and decision-making:</p>
+                    <ul>
+                        <li>Many fields were mostly empty: 50 fields >98% missing, 16 partially missing, only 16 fully
+                            complete</li>
+                        <li>Industry missing for >31% of the total records, there are over 600 distinct industries</li>
+                        <li>Job Title missing for >35% of the total records, there are more than 2000 distinct job
+                            titles</li>
+                        <li>Lead Status missing for >50% of the records</li>
+                        <li>Email/Lead Source missing for more than 2,000 records</li>
+
+                    </ul>
+                    <p>Without reliable data, it was difficult to measure lead conversion, segment accounts, track
+                        revenue, or identify at-risk clients. Large gaps in key information, such as Industry, Company
+                        Size, and activity frequency, prevented the business from learning from the data and using it to
+                        guide strategy.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- The Solution -->
+    <div class="section-wrapper solution-wrapper">
+        <section id="solution-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">The Solution</h2>
+                <div class="solution-item">
+                    <p>A SQL-driven data quality and enrichment workflow was implemented to clean, standardise, and
+                        enhance CRM data.</p>
+                    <br>
+                    <p><strong>Check data completeness:</strong></p>
+                    <ul>
+                        <li>Counted missing values, percentages, and distinct entries for key fields</li>
+                        <li>Evaluated patterns of missing or inconsistent data to prioritize quality improvements</li>
+                        <li>Assessed potential impact of data gaps on reporting accuracy and decision-making</li>
+                    </ul>
+                    <p><strong>Fill missing data:</strong></p>
+                    <ul>
+                        <li>Used email domains with external tables (Gemini) to estimate missing Company Size and
+                            Industry</li>
+                        <li>Standardised over 600 unique industries into 26 clear categories</li>
+                        <li>Cleaned and standardised Job Title values</li>
+                        <li>Used business logic to apply the correct lead status</li>
+                        <li>Used a detailed lead source field to fill in missing lead source values</li>
+                    </ul>
+                    <p><strong>Prepare client and account analysis:</strong></p>
+                    <ul>
+                        <li>Created views to categorize accounts as New, Existing, Returning, Lost, or Prospect</li>
+                        <li>Calculated total revenue won and assigned Tier 1–4 classifications</li>
+                        <li>Tracked opportunity frequency and flagged accounts with no recent activity for potential
+                            churn</li>
+                    </ul>
+                    <p><strong>Monitor lead conversion:</strong></p>
+                    <ul>
+                        <li>Combined converted and unconverted leads, calculated lead age, and tracked if opportunities
+                            happened before conversion to evaluate marketing and sales performance</li>
+                    </ul>
+                </div>
+
+                <div class="solution-item sql-diagnostics">
+                    <h3>Sample SQL Diagnostics</h3>
+                    <p>SQL queries were used to audit CRM data completeness and industry mapping coverage before
+                        enrichment.</p>
+
+                    <ul>
+                        <li><strong>Data Quality Summary:</strong> Counted missing values and distinct entries for
+                            key lead fields.</li>
+                        <li><strong>Industry Gap Analysis:</strong> Classified industries as <em>Missing</em>, <em>Needs
+                                Mapping</em>, or <em>Correct</em> to measure standardization coverage.</li>
+                    </ul>
+
+                    <div class="solution-image sql-snips">
+                        <img src="pages-apps/audit/sql1.png" alt="Leads Data Quality SQL Snip">
+                        <img src="pages-apps/audit/sql3.png" alt="Industry Gap Analysis SQL Snip">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- The Result -->
+    <div class="section-wrapper project-overiew-wrapper">
+        <section id="project-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">Results & Impact</h2>
+                <div class="overview-item">
+                    <p>The cleaned and enriched CRM data enabled more reliable reporting and actionable insight across
+                        sales and marketing.</p>
+                    <ul>
+                        <li>Filling critical gaps and standardising data significantly improved completeness and
+                            accuracy.</li>
+                        <li>Industry and lead source cleanup made segmentation and reporting more reliable.</li>
+                        <li>Client classification, revenue tiers, and churn flags provided actionable insights to
+                            prioritise high-value and at-risk accounts.</li>
+                        <li>Opportunity frequency and lead conversion tracking enabled proactive engagement and better
+                            marketing/sales decisions.</li>
+                    </ul>
+                    <p><strong>Overall, the project transformed unreliable CRM data into a trusted analytical
+                            foundation, enabling 100% data-driven decisions and directly supporting improved lead
+                            conversion, account management, and revenue growth.</strong>
+                    </p>
+                </div>
+
+                <div class="solution-image">
+                    <img src="pages-apps/audit/data-transformed-2.png" alt="Snip">
+                    <img src="pages-apps/audit/data-transformed-3.png" alt="Snip">
+                </div>
+
+                <br>
+                <p><em>Note: All metrics presented are based on professional experience and have been anonymised,
+                        aggregated, or proportionally adjusted to ensure compliance with confidentiality and data
+                        protection
+                        standards.</em>
+                </p>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- More Projects Section -->
+    <div class="section-wrapper more-projects-wrapper">
+        <section id="more-projects">
+            <div class="content-wrapper">
+                <h2 class="section-title">More Projects</h2>
+                <div class="more-projects-container">
+                    <a href="classifier-app.html" class="more-project">
+                        <img src="home/workflows/Client-Class.png" alt="Classifier">
+                        <br>
+                        <h3 class="section-subtitle">Client Classifier Application</h3>
+                        <p>A Python application that classifies clients using large-scale data and custom
+                            business
+                            logic.</p>
+                        <br>
+                        <p><strong>85% faster</strong> client data processing</p>
+                    </a>
+                    <a href="revenue-dashboard.html" class="more-project">
+                        <img src="home/projects/RevDashNew_.png" alt="Revenue Dashboard">
+                        <h3 class="section-subtitle">Revenue & Client Insights</h3>
+                        <p>Interactive dashboard visualising key sales KPIs, trends, and insights to support
+                            strategic decision-making.</p>
+                        <br>
+                        <p>MySQL • Zoho • Power BI</p>
+                    </a>
+                    <a href="utm-generator.html" class="more-project">
+                        <img src="home/workflows/UTM-gen.png" alt="UTM">
+                        <br>
+                        <h3 class="section-subtitle">UTM Generator</h3>
+                        <p>A Python + Streamlit application that automates UTM URL creation across channels
+                            and
+                            tactics.</p>
+                        <br>
+                        <p><strong>90% faster</strong> URL generation</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Loredana</p>
+            <nav>
+                <a href="home.html">About</a>
+                <a href="home.html#projects">Projects</a>
+                <a href="#contact" class="open-contact-modal">Contact</a>
+            </nav>
+            <a href="#" class="back-to-top">︿</a>
+        </div>
+    </footer>
+
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        window.onscroll = function () {
+            let currentScroll = window.pageYOffset;
+            header.style.top = (currentScroll > lastScroll) ? '-100px' : '0';
+            lastScroll = currentScroll;
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTop = document.querySelector(".back-to-top");
+            window.addEventListener("scroll", function () {
+                backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+            });
+            backToTop.addEventListener("click", function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+
+    <div id="modal-container"></div>
+    <script>
+        fetch('contact-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('modal-container').innerHTML = html;
+
+                // Initialize modal after HTML is inserted
+                const modal = document.getElementById('contactModal');
+                const closeBtn = modal.querySelector('.close-btn');
+
+                // Attach click events to all triggers
+                document.querySelectorAll('.open-contact-modal').forEach(button => {
+                    button.addEventListener('click', e => {
+                        e.preventDefault();
+                        modal.style.display = 'flex';
+                    });
+                });
+
+                // Close modal on X
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+
+                // Close modal if clicking outside modal-content
+                window.addEventListener('click', e => {
+                    if (e.target === modal) modal.style.display = 'none';
+                });
+            });
+    </script>
+
+</body>
+
+</html>

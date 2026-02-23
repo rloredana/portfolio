@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loredana | UTM Generator</title>
+    <link rel="icon" type="image/png" href="logo/rl_white.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="contact-modal.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="home.html">
+                    <img src="logo/rl_gold.png" alt="LR Logo" class="logo">
+                </a>
+                <h1>Loredana</h1>
+            </div>
+            <nav>
+                <a href="home.html">About</a>
+                <a href="home.html#projects">Projects</a>
+                <a href="#contact" class="open-contact-modal">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="section-wrapper introduction-wrapper">
+        <section id="introduction-wrapper">
+            <div class="content-wrapper">
+                <h2 class="section-title">Campaign UTM Generator</h2>
+                <p>This Python-based application automates the creation of UTM URLs for marketing campaigns.
+                    It supports multiple channels, platforms, and tactics, generating clean, structured links ready for
+                    tracking across digital campaigns.</p>
+                <p>The tool ensures consistency in naming conventions, reduces manual errors, and streamlines the
+                    process of preparing marketing analytics-ready URLs.</p>
+            </div>
+            <div class="dashboard-image">
+                <img src="pages-apps/utm/utm-intro.png" alt="UTM Generator App Screenshot">
+            </div>
+        </section>
+    </div>
+
+    <!-- The Problem -->
+    <div class="section-wrapper project-overiew-wrapper">
+        <section id="project-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">The Problem</h2>
+                <div class="overview-item">
+                    <p>Marketers often spend significant time manually creating UTM URLs for multiple campaigns,
+                        platforms, and tactics.</p>
+                    <p>This process was error-prone and inconsistent, causing issues such as:</p>
+                    <ul>
+                        <li>Inconsistent naming conventions across campaigns</li>
+                        <li>Errors in UTM parameters (utm_source, utm_medium, utm_campaign)</li>
+                        <li>Difficulty tracking campaign performance accurately</li>
+                        <li>Time-consuming manual URL generation for each platform/tactic combination</li>
+                    </ul>
+                    <p><strong>Overall, manual UTM creation reduced productivity and created unreliable tracking
+                            data.</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- The Solution -->
+    <div class="section-wrapper solution-wrapper">
+        <section id="solution-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">The Solution</h2>
+                <div class="solution-item">
+                    <p>The Campaign UTM Generator automates UTM URL creation using a Python + Streamlit web interface.
+                    </p>
+                    <p>Key features include:</p>
+                    <ul>
+                        <li>Support for multiple channels (Display, Social, Search, Email)</li>
+                        <li>Select specific platforms and tactics per channel</li>
+                        <li>Automatic generation of utm_source, utm_medium, utm_campaign, utm_content, and optional
+                            utm_term</li>
+                        <li>Exportable CSV tracking for all generated URLs</li>
+                        <li>Interactive selection using Streamlit session state for dynamic URL generation</li>
+                        <li>Consistent naming conventions for campaigns and tactics</li>
+                        <li>Audit-friendly tracking to avoid duplicate URLs</li>
+                    </ul>
+                </div>
+
+                <div class="solution-image">
+                    <img src="pages-apps/utm/utm-1.png" alt="Snip">
+                    <img src="pages-apps/utm/utm-2.png" alt="Snip">
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- The Result -->
+    <div class="section-wrapper project-overiew-wrapper">
+        <section id="project-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">The Result</h2>
+                <div class="overview-item">
+                    <p>The UTM Generator replaced manual spreadsheet workflows with a dynamic, automated web app.</p>
+                    <p>The solution delivered:</p>
+                    <ul>
+                        <li>Faster URL generation for campaigns across multiple platforms</li>
+                        <li>Reduced human errors and inconsistencies</li>
+                        <li>Ability to handle multiple tactics and channels at scale</li>
+                        <li>Clean CSV outputs ready for marketing analytics tools</li>
+                        <li>Improved campaign tracking accuracy and reporting efficiency</li>
+                    </ul>
+                    <p><strong>The tool enables marketers to quickly generate standardized UTM URLs, improving campaign
+                            tracking and ROI measurement.</strong></p>
+                </div>
+                <div class="overview-image">
+                    <img src="pages-apps/utm/utm-result.png" alt="Generated UTM URLs Screenshot">
+                </div>
+
+                <br>
+                <p><em>Note: All metrics presented are based on professional experience and have been anonymised,
+                        aggregated, or proportionally adjusted to ensure compliance with confidentiality and data
+                        protection
+                        standards.</em>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- More Projects Section -->
+    <div class="section-wrapper more-projects-wrapper">
+        <section id="more-projects">
+            <div class="content-wrapper">
+                <h2 class="section-title">More Projects</h2>
+                <div class="more-projects-container">
+                    <a href="classifier-app.html" class="more-project">
+                        <img src="home/workflows/Client-Class.png" alt="Classifier">
+                        <br>
+                        <h3 class="section-subtitle">Client Classifier Application</h3>
+                        <p>A Python application that classifies clients using large-scale data and custom
+                            business
+                            logic.</p>
+                        <br>
+                        <p><strong>85% faster</strong> client data processing</p>
+                    </a>
+                    <a href="executive-dashboard.html" class="more-project">
+                        <img src="home/projects/EXECdash_new_.png" alt="Executiv Dashboard">
+                        <h3 class="section-subtitle">Executive Performance</h3>
+                        <p>Executive dashboard visualising key metrics, tracking revenue trends, and
+                            delivering
+                            business insights.</p>
+                        <br>
+                        <p>BigQuery • ARIMA • PowerBI</p>
+                    </a>
+                    <a href="crm-audit.html" class="more-project">
+                        <img src="home/workflows/CRM-Audit.png" alt="Audit">
+                        <br>
+                        <h3 class="section-subtitle">Data Audit & Transformation</h3>
+                        <p>Audit, transform, and enrich CRM data to ensure accuracy, standardise key fields consistently.</p>
+                        <br>
+                        <p><strong>100% data-driven</strong> decisions enabled</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Loredana</p>
+            <nav>
+                <a href="home.html">About</a>
+                <a href="home.html#projects">Projects</a>
+                <a href="#contact" class="open-contact-modal">Contact</a>
+            </nav>
+            <a href="#" class="back-to-top">︿</a>
+        </div>
+    </footer>
+
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        window.onscroll = function () {
+            let currentScroll = window.pageYOffset;
+            header.style.top = (currentScroll > lastScroll) ? '-100px' : '0';
+            lastScroll = currentScroll;
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTop = document.querySelector(".back-to-top");
+            window.addEventListener("scroll", function () {
+                backToTop.style.display = (window.scrollY > 300) ? "block" : "none";
+            });
+            backToTop.addEventListener("click", function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+
+    <div id="modal-container"></div>
+    <script>
+        fetch('contact-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('modal-container').innerHTML = html;
+
+                // Initialize modal after HTML is inserted
+                const modal = document.getElementById('contactModal');
+                const closeBtn = modal.querySelector('.close-btn');
+
+                // Attach click events to all triggers
+                document.querySelectorAll('.open-contact-modal').forEach(button => {
+                    button.addEventListener('click', e => {
+                        e.preventDefault();
+                        modal.style.display = 'flex';
+                    });
+                });
+
+                // Close modal on X
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+
+                // Close modal if clicking outside modal-content
+                window.addEventListener('click', e => {
+                    if (e.target === modal) modal.style.display = 'none';
+                });
+            });
+    </script>
+
+</body>
+
+</html>

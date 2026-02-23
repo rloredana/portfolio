@@ -1,0 +1,402 @@
+/* ============================================================================
+   INTRODUCTION SECTION
+   ============================================================================ */
+.introduction-wrapper {
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+#introduction-wrapper {
+    display: flex;
+    flex-direction: row;       /* side by side */
+    align-items: center;       /* vertically center text and image */
+    justify-content: space-between;
+    gap: 2rem;                 /* space between text and image */
+    flex-wrap: wrap;           /* wrap on small screens */
+    text-align: left;
+}
+
+#introduction-wrapper .content-wrapper {
+    flex: 1;                   /* take up remaining space */
+    min-width: 300px;          /* prevent text from getting too small */
+    text-align: justify;
+}
+
+#introduction-wrapper .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;       /* space between text and line */
+    border-bottom: 1px solid #9a9a9a;  /* simple line under title */
+    width: 100%;           /* make line span the entire content-wrapper */
+    box-sizing: border-box;
+}
+
+#introduction-wrapper p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.dashboard-image {
+    flex: 1;                   /* take up remaining space */
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.dashboard-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    #introduction-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dashboard-image {
+        margin-top: 2rem;
+    }
+}
+
+/* ============================================================================
+   PROJECT OVERVIEW SECTION + The Problem + The Result
+   ============================================================================ */
+.project-overiew-wrapper {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+}
+
+/* Stack overview-items vertically */
+.overview-item {
+    display: block;      /* no more flex needed */
+    margin-bottom: 1.5rem;
+}
+
+/* Paragraph text with bold labels */
+.overview-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.overview-item ul {
+    list-style: disc inside; /* bullets aligned with text */
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0rem;    /* small padding for readability */
+}
+
+/* Image below all items */
+.overview-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.overview-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Flex container for CARDS */
+.overview-cards {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Note-style card */
+.overview-card.note {
+    background-color: #ffffff;       /* pale yellow like sticky note #fff9d6 */
+    border: 2px dashed #c6c5c5;      /* hand-drawn style border #e0d68f */
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1 1 300px;
+    max-width: 320px;
+    font-family: 'Patrick Hand', 'Comic Sans MS', cursive; /* handwritten font */
+    box-shadow: 4px 6px 10px rgba(0,0,0,0.15);
+    transform: rotate(-0deg);        /* slight rotation for hand-placed look */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Titles and text */
+.overview-card.note h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.overview-card.note p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Optional: import a Google Handwritten font */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* ============================================================================
+   THE SOLUTION SECTION
+   ============================================================================ */
+.solution-wrapper {
+    background-color: #ffffff;
+    padding: 3rem 1rem;
+}
+
+/* Stack overview-items vertically */
+.solution-item {
+    display: block;      /* no more flex needed */
+    margin-bottom: 1.5rem;
+}
+
+/* Paragraph text with bold labels */
+.solution-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.solution-item ul {
+    list-style: disc inside; /* bullets aligned with text */
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0rem;    /* small padding for readability */
+}
+
+/* Image below all items */
+.solution-image {
+    display: flex;
+    gap: 0px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* ============================================================================ 
+   DASHBOARD PREVIEW - 2 
+   ============================================================================ */
+.dash-wrapper {
+    background-color: #ffffff;
+    /* background: linear-gradient(180deg, #f3f3f3, #fffaca); */
+    padding: 3rem 1rem;
+}
+
+.dash-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.dash-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+
+/* ============================================================================ 
+   PROCESS SECTION - 2 COLUMNS FOR ITEMS ONLY
+   ============================================================================ */
+.process-wrapper {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+}
+.process-wrapper .content-wrapper {
+    display: flex;
+    flex-direction: column; /* keep the h2 on top naturally */
+    /* gap: 2rem;           /* spacing between h2 and the grid of items */
+}
+
+.process-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 4rem;                             /* space between items */
+}
+
+.process-item {
+    display: flex;
+    flex-direction: column;                /* h3 above p */ 
+}
+
+.process-item h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.1rem;       /* space between h3 and line */
+    border-bottom: 1px solid #9a9a9a;  /* simple line under title */
+    width: 100%;           /* make line span the entire content-wrapper */
+    box-sizing: border-box;
+}
+
+.process-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 2;
+}
+
+/* ============================================================================
+   MORE PROJECT SECTION
+   ============================================================================ */
+.more-projects-wrapper {
+    background: linear-gradient(180deg, #f3f3f3, #fffaca);
+}
+
+.more-projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap to the next row */
+    gap: 2rem; /* Space between items */
+    justify-content: center; /* Centers the items in the row */
+}
+
+.more-project {
+    display: block;           /* make entire card clickable */
+    text-decoration: none;    /* remove underline */
+    color: inherit;           /* keep text color */
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.33% - 2rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-project img {
+    width: 100%; /* Makes sure the image fits the width of the project card */
+    height: auto;
+    border-radius: 8px; /* Rounds the corners of the image */
+    border: 2px solid #f9f9f9; /* Rounded border line #ccc */
+}
+
+.more-project:hover {
+    transform: translateY(-10px); /* moves the card up by 10px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* optional: slightly stronger shadow for effect */
+}
+
+/* ============================================================================
+   PREMIUM MOBILE RESPONSIVENESS
+   ============================================================================ */
+
+/* =========================================
+   SIMPLE PREMIUM RESPONSIVENESS – TABLET
+   ========================================= */
+@media (max-width: 1024px) {
+
+    /* Intro section image below text */
+    #introduction-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .dashboard-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Overview cards stack */
+    .overview-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Process grid stack */
+    .process-items-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Images scale properly */
+    .dash-image img,
+    .overview-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* More projects stack */
+    .more-projects-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .more-project {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   PREMIUM MOBILE CLEAN VERSION
+   ========================================= */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 2rem 5%;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    /* Cards get softer feel */
+    .overview-card,
+    .process-item,
+    .more-project {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    /* Images full width with spacing */
+    .dashboard-image img,
+    .dash-image img,
+    .overview-image img,
+    .more-project img {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+        border-radius: 10px;
+    }
+
+    /* More breathing room between sections */
+    .section-wrapper {
+        padding: 2.5rem 0;
+    }
+
+    /* Footer stack cleanly */
+    .footer-container {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loredana | Data Portfolio</title>
+    <link rel="icon" type="image/png" href="logo/rl_white.png">
+    <!-- Some browsers (like Chrome) will automatically look for a favicon.ico file in the root directory of the website -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="contact-modal.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo and Name -->
+            <div class="logo-container">
+                <a href="home.html">
+                    <img src="logo/rl_gold.png" alt="LR Logo" class="logo">
+                </a>
+                <h1>Loredana</h1>
+            </div>
+            <!-- Navigation Links -->
+            <nav>
+                <a href="home.html">About</a>
+                <a href="home.html#projects">Projects</a>
+                <a href="#contact" class="open-contact-modal">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="section-wrapper introduction-wrapper">
+        <section id="introduction-wrapper">
+            <div class="content-wrapper">
+                <!-- Dashboard Name -->
+                <h2 class="section-title">Client Classifier Application</h2>
+                <p>I created a Python-based client classification application designed to process large-scale trading
+                    and revenue
+                    data using custom business logic.
+                    The application dynamically classifies clients as New Client, Returning Client, Existing, or No
+                    Trade,
+                    delivering consistent and auditable classifications across reporting periods while significantly
+                    reducing processing time.
+                </p>
+                <!-- <p> Built for performance and scalability, the application processes multi-source Excel inputs, applies gap-based temporal logic, and produces clean, report-ready outputs for downstream analytics and executive reporting.
+                </p> -->
+                <br> <!-- This adds space between the two paragraphs -->
+            </div>
+            <div class="dashboard-image">
+                <img src="pages-apps/classifier/classification-2.png" alt="Client Classifier App">
+            </div>
+        </section>
+    </div>
+
+    <!-- The Problem -->
+    <div class="section-wrapper project-overiew-wrapper">
+        <section id="project-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">The Problem</h2>
+
+                <div class="overview-item">
+                    <p>Customer trading classifications were produced as a monthly report and maintained in large Excel
+                        workbooks.</p>
+                    <p>Each cycle required reviewing up to four years of historical trading data across 15+ entities
+                        within the Europe region to determine whether customers should be classified as New Client,
+                        Returning Client, or Existing.
+                    </p>
+                    <br>
+                    <p>As data volume grew, this Excel-based process became increasingly inefficient:</p>
+                    <ul>
+                        <li>Historical data had to be manually referenced across years</li>
+                        <li>Files were spread across multiple folders and sources</li>
+                        <li>Customer and entity names were inconsistently formatted</li>
+                        <li>Classification logic depended on identifying long inactivity gaps</li>
+                        <li>Monthly recalculations routinely took several days to complete</li>
+                    </ul>
+                    <p><strong>The workflow was slow, difficult to validate, and increasingly fragile.</strong></p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- The Solution -->
+    <div class="section-wrapper solution-wrapper">
+        <section id="solution-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">The Solution</h2>
+
+                <div class="solution-item">
+                    <p>A Python application was developed to replace the Excel-driven workflow and automate customer
+                        trading classification while preserving existing business rules.</p>
+                    <p>The solution now processes trading activity for all 15+ entities in the Europe region and
+                        produces
+                        accurate classifications of New Client, Returning Client, or Existing.</p>
+                    <br>
+                    <p>The automated workflow provides several key improvements over the manual Excel process:</p>
+                    <ul>
+                        <li>Automatically loads all Excel inputs from structured directories</li>
+                        <li>Normalises customer group and entity identifiers to ensure reliable matching</li>
+                        <li>Converts reporting periods into dates and processes activity chronologically</li>
+                        <li>Groups trading activity into rolling 12-month blocks and detects inactivity gaps</li>
+                        <li>Applies rule-based classification logic consistently</li>
+                        <li>Handles periods with no trading activity explicitly</li>
+                        <li>Supports an external exceptions module to override classifications for specific cases
+                            without altering core logic</li>
+                        <li>Produces both an audit-friendly dataset and a clean, reporting-ready output</li>
+                        <li>Includes execution progress, logging, and summary statistics to support validation and
+                            review</li>
+                        <li>Processes data for all 15+ entities in the European region, ensuring classifications are
+                            accurate for critical performance monitoring</li>
+                    </ul>
+                    <p><strong>This automated, scalable approach ensures that classifications are accurate, repeatable,
+                            and ready for integration into monthly performance monitoring workflows.</strong></p>
+                </div>
+
+                <div class="solution-image">
+                    <img src="pages-apps/classifier/classification-2.png" alt="Snip">
+                </div>
+
+                <div class="solution-image">
+                    <img src="pages-apps/classifier/1.png" alt="Snip">
+                    <img src="pages-apps/classifier/2.png" alt="Snip">
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- The Result -->
+    <div class="section-wrapper project-overiew-wrapper">
+        <section id="project-overview">
+            <div class="content-wrapper">
+                <h2 class="section-title">The Result</h2>
+
+                <div class="overview-item">
+                    <p>The automated solution replaced a multi-day, Excel-driven monthly process with a repeatable and
+                        scalable pipeline used across all 15+ entities in the Europe region.</p>
+                    <br>
+                    <p>The impact of this solution includes:</p>
+                    <ul>
+                        <li>Monthly classification runtime reduced from several days to less than one day</li>
+                        <li>Four years of historical data processed in a single, consistent run</li>
+                        <li>Manual handling of Excel files eliminated</li>
+                        <li>Classification logic applied uniformly across all entities and periods</li>
+                        <li>Reporting outputs generated faster and with improved reliability</li>
+                    </ul>
+                    <p><strong>The solution made monthly reporting predictable, auditable, and scalable as historical
+                            data
+                            continues to grow, while supporting critical performance monitoring across the
+                            region.</strong>
+                    <p><strong>Output data is formatted and ready to be refreshed directly in Power BI for reporting
+                            and visualization.</strong>
+                    </p>
+                    </p>
+                </div>
+
+                <div class="overview-image">
+                    <img src="pages-apps/classifier/Client-Class-Overview-.png" alt="Data preparation diagram">
+                </div>
+
+                <br>
+                <p><em>Note: All metrics presented are based on professional experience and have been anonymised,
+                        aggregated, or proportionally adjusted to ensure compliance with confidentiality and data
+                        protection
+                        standards.</em>
+                </p>
+
+            </div>
+        </section>
+    </div>
+
+
+    <!-- More Projects Section -->
+    <div class="section-wrapper more-projects-wrapper">
+        <section id="more-projects">
+            <div class="content-wrapper">
+                <h2 class="section-title">More Projects</h2>
+                <div class="more-projects-container">
+                    <a href="crm-audit.html" class="more-project">
+                        <img src="home/workflows/CRM-Audit.png" alt="Audit">
+                        <br>
+                        <h3 class="section-subtitle">Data Audit & Transformation</h3>
+                        <p>Audit, transform, and enrich CRM data to ensure accuracy, standardise key fields consistently.</p>
+                        <br>
+                        <p><strong>100% data-driven</strong> decisions enabled</p>
+                    </a>
+                    <a href="commercial-dashboard.html" class="more-project">
+                        <img src="home/projects/Commercial_dash_.png" alt="Comercial Dashboard">
+                        <h3 class="section-subtitle">Commercial Overview</h3>
+                        <p>Finance dashboard visualising key KPIs, profitability trends, and cost insights
+                            to
+                            drive
+                            decision-making.</p>
+                        <br>
+                        <p>QlikSense • Excel • PowerBI</p>
+                    </a>
+                    <a href="utm-generator.html" class="more-project">
+                        <img src="home/workflows/UTM-gen.png" alt="UTM">
+                        <br>
+                        <h3 class="section-subtitle">UTM Generator</h3>
+                        <p>A Python + Streamlit application that automates UTM URL creation across channels
+                            and
+                            tactics.</p>
+                        <br>
+                        <p><strong>90% faster</strong> URL generation</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Loredana</p>
+            <nav>
+                <a href="home.html">About</a>
+                <a href="home.html#projects">Projects</a>
+                <a href="#contact" class="open-contact-modal">Contact</a>
+            </nav>
+            <!-- Up Arrow Button -->
+            <a href="#" class="back-to-top">︿</a>
+        </div>
+    </footer>
+
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.onscroll = function () {
+            let currentScroll = window.pageYOffset;
+            header.style.top = (currentScroll > lastScroll) ? '-100px' : '0';
+            lastScroll = currentScroll;
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTop = document.querySelector(".back-to-top");
+
+            // Show/hide button on scroll
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 300) {
+                    backToTop.style.display = "block"; // Show button
+                } else {
+                    backToTop.style.display = "none"; // Hide button
+                }
+            });
+
+            // Smooth scroll to top
+            backToTop.addEventListener("click", function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+
+    <div id="modal-container"></div>
+    <script>
+        fetch('contact-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('modal-container').innerHTML = html;
+
+                // Initialize modal after HTML is inserted
+                const modal = document.getElementById('contactModal');
+                const closeBtn = modal.querySelector('.close-btn');
+
+                // Attach click events to all triggers
+                document.querySelectorAll('.open-contact-modal').forEach(button => {
+                    button.addEventListener('click', e => {
+                        e.preventDefault();
+                        modal.style.display = 'flex';
+                    });
+                });
+
+                // Close modal on X
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+
+                // Close modal if clicking outside modal-content
+                window.addEventListener('click', e => {
+                    if (e.target === modal) modal.style.display = 'none';
+                });
+            });
+    </script>
+
+</body>
+
+</html>
