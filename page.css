@@ -400,17 +400,19 @@
         padding: 1.3rem !important;
         border-radius: 12px !important;
     }
-
+   
+    .overview-card.note *,
     .overview-card.note h3,
     .overview-card.note p,
     .overview-card.note li {
         font-family: Arial, sans-serif !important;
         font-size: 0.95rem !important;
         line-height: 1.5 !important;
-        font-weight: normal !important;      /* ensures no bold/handwriting look */
-        letter-spacing: normal !important;   /* prevents tight/handwritten spacing */
+        font-weight: normal !important;
+        letter-spacing: normal !important;
     }
 }
+
 
 
 
