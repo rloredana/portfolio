@@ -13,9 +13,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3D7F49X4K"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        
+
         gtag('config', 'G-L3D7F49X4K');
     </script>
 </head>
@@ -266,21 +266,29 @@
         fetch('contact-modal.html')
             .then(res => res.text())
             .then(html => {
+                // Insert modal HTML
                 document.getElementById('modal-container').innerHTML = html;
 
-                // Initialize modal after HTML is inserted
+                // Initialize modal elements
                 const modal = document.getElementById('contactModal');
                 const closeBtn = modal.querySelector('.close-btn');
+                const emailLink = modal.querySelector('.email-link');
 
                 // Attach click events to all triggers
                 document.querySelectorAll('.open-contact-modal').forEach(button => {
                     button.addEventListener('click', e => {
                         e.preventDefault();
                         modal.style.display = 'flex';
+
+                        // GA Event: modal opened
+                        gtag('event', 'contact_modal_open', {
+                            'event_category': 'engagement',
+                            'event_label': 'Contact Modal'
+                        });
                     });
                 });
 
-                // Close modal on X
+                // Close modal on X button
                 closeBtn.addEventListener('click', () => {
                     modal.style.display = 'none';
                 });
@@ -289,12 +297,21 @@
                 window.addEventListener('click', e => {
                     if (e.target === modal) modal.style.display = 'none';
                 });
-            });
+
+                // GA Event: track email clicks inside modal
+                emailLink.addEventListener('click', () => {
+                    gtag('event', 'contact_email_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'Email Click'
+                    });
+                });
+            })
+            .catch(err => console.error('Failed to load modal:', err));
     </script>
+
+
 
 
 </body>
 
 </html>
-
-
